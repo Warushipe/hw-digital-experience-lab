@@ -1,2 +1,5 @@
-# hw-digital-experience-lab
-HW Digital Experience Lab
+# HW Digital Experience Lab
+
+Technical validation environment for web technologies,
+analytics implementations, SPA behavior, integrations,
+and user experience experiments.
