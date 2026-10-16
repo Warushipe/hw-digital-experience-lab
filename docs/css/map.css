@@ -82,6 +82,10 @@ h1 {
     font-size: 18px;
 
     vertical-align: middle;
+
+    color: #66554b;
+    
+    transition: all 0.3s ease;  
 }
 
 
@@ -103,9 +107,10 @@ h1 {
 /* ホバー */
 
 .onsen:hover .dot {
-    background-color: #b26a39;
+    background-color: #2d6cdf;
 }
 
 .onsen:hover .label {
-    text-decoration: underline;
+   color: #2d6cdf;
+   font-size: 22px;
 }
