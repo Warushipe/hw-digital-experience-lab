@@ -1,116 +1,89 @@
 /* 背景 */
-
 body {
     margin: 0;
     padding: 40px;
-
     background-color: #ececec;
-
     color: #66554b;
-
     font-family:
         "Yu Mincho",
         "Hiragino Mincho ProN",
         serif;
 }
 
-
 /* タイトル */
-
 h1 {
     text-align: center;
-
     font-weight: normal;
-
     margin-bottom: 40px;
 }
 
-
 /* 地図エリア */
-
 .map-container {
     position: relative;
-
     width: 600px;
-
     margin: 0 auto;
 }
 
-
 /* 地図 */
-
 .map-container img {
     width: 100%;
-
     display: block;
 }
 
-
 /* 温泉共通 */
-
 .onsen {
     position: absolute;
-
     text-decoration: none;
-
     color: #66554b;
 }
-
 
 /* ● */
-
 .dot {
-    width: 14px;
-
-    height: 14px;
-
-    border-radius: 50%;
-
-    background-color: #7f5539;
-
     display: inline-block;
-
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #7f5539;
     vertical-align: middle;
 }
 
-
 /* ラベル */
-
 .label {
     margin-left: 8px;
-
     font-size: 18px;
-
     vertical-align: middle;
-
     color: #66554b;
-    
     transition: all 0.3s ease;  
 }
 
-
 /* 那須温泉 */
-
 .nasu {
     top: 20%;
     left: 60%;
 }
 
 /* 伊香保温泉 */
-
 .ikaho {
     top: 40%;
     left: 30%;
 }
 
-
 /* ホバー */
-
 .onsen:hover .dot {
-    background-color: #2d6cdf;
+    width: auto;
+    height: auto;
+    background: none;
 }
 
 .onsen:hover .label {
    color: #2d6cdf;
    font-size: 22px;
+}
+
+/* ♨を表示 */
+.onsen:hover .dot::before {
+    content: "♨";
+    color: #2d6cdf;
+    font-size: 24px;
+    line-height: 1;
 }
