@@ -1,1 +1,138 @@
-xx
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPA test</title>
+
+    <style>
+
+        body {
+            background-color: #ececec;
+            color: #66554b;
+            font-family:
+                "Yu Mincho",
+                "Hiragino Mincho ProN",
+                serif;
+
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            background: #7f5539;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #c86b2a;
+        }
+
+        .page {
+            text-align: center;
+        }
+
+        .map-image {
+            width: 500px;
+            max-width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+        function render(page) {
+
+            const app = document.getElementById("app");
+
+            if (page === "top") {
+
+                app.innerHTML = `
+                    <div class="page">
+
+                        <h1>孤独な温泉研究所</h1>
+
+                        <p>
+                            温泉の正確な記録ではなく、
+                            温泉の記憶を記録する。
+                        </p>
+
+                        <button onclick="render('map')">
+                            地図を見る
+                        </button>
+
+                    </div>
+                `;
+            }
+
+            if (page === "map") {
+
+                app.innerHTML = `
+                    <div class="page">
+
+                        <h1>栃木県</h1>
+
+                        <img
+                            src="img/tochigi.png"
+                            class="map-image"
+                            alt="栃木県地図">
+
+                        <br>
+
+                        <button onclick="render('nasu')">
+                            那須温泉
+                        </button>
+
+                        <br>
+
+                        <button onclick="render('top')">
+                            戻る
+                        </button>
+
+                    </div>
+                `;
+            }
+
+            if (page === "nasu") {
+
+                app.innerHTML = `
+                    <div class="page">
+
+                        <h1>那須温泉</h1>
+
+                        <p>
+                            那須連山の麓に広がる歴史ある温泉地。
+                        </p>
+
+                        <button onclick="render('map')">
+                            栃木県へ戻る
+                        </button>
+
+                    </div>
+                `;
+            }
+
+        }
+
+        render("top");
+
+    </script>
+
+</body>
+
+</html>
