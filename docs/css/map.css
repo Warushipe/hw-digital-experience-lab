@@ -76,14 +76,14 @@ h1 {
 }
 
 .onsen:hover .label {
-   color: #2d6cdf;
+   color: #e67e22;
    font-size: 22px;
 }
 
 /* ♨を表示 */
 .onsen:hover .dot::before {
     content: "♨";
-    color: #2d6cdf;
+    color: #e67e22;
     font-size: 24px;
     line-height: 1;
 }
